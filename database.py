@@ -9,11 +9,11 @@ cursor=connection.cursor()
 
 ## create the table
 table_info='''
-create table student(
+create table if not exists student(
     NAME VARCHAR(25),
     CLASS VARCHAR(25),
     SECTION VARCHAR(25),
-    MARKS INT
+    SCORE INT
 );
 '''
 cursor.execute(table_info)
