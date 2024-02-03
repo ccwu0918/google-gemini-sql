@@ -60,7 +60,7 @@ submit=st.button("Ask the question")
 if submit:
     response=get_gemini_response(question,prompt)
     print(response)
-    response=read_sql_query(response,"student.db")
+    response=read_sql_query(response,"./student.db")
     st.subheader("The REsponse is")
     for row in response:
         st.header(row)
